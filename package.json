@@ -1,0 +1,38 @@
+{
+  "name": "pipility-school-dashboard-monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev:all": "turbo run dev --filter=@pipility-school-dashboard/apis --filter=@pipility-school-dashboard/dashboard --filter=@pipility-school-dashboard/docs",
+    "dev:apis": "turbo run dev --filter=@pipility-school-dashboard/apis",
+    "dev:dashboard": "turbo run dev --filter=@pipility-school-dashboard/dashboard",
+    "dev:docs": "turbo run dev --filter=@pipility-school-dashboard/docs",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "format": "prettier --write .",
+    "prepare": "husky"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.31.0",
+  "devDependencies": {
+    "eslint": "^10.1.0",
+    "husky": "^9.1.7",
+    "prettier": "3.8.1",
+    "turbo": "^2.8.20",
+    "typescript": "^5.9.3"
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx}": [
+      "eslint --fix",
+      "prettier --write --ignore-unknown"
+    ],
+    "!*.{js,ts,jsx,tsx}": [
+      "prettier --write --ignore-unknown"
+    ],
+    "apps/apis/**/*.php": [
+      "./scripts/pint-staged.sh"
+    ]
+  }
+}

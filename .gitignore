@@ -1,0 +1,75 @@
+# =========================
+# Node / Monorepo
+# =========================
+node_modules/
+.pnpm-store/
+.turbo/
+dist/
+build/
+.next/
+out/
+
+# Logs
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Env files
+.env
+.env.*
+!.env.example
+
+# =========================
+# Laravel (apps/apis)
+# =========================
+apps/apis/vendor/
+apps/apis/node_modules/
+apps/apis/public/build/
+apps/apis/public/hot
+apps/apis/storage/*.key
+apps/apis/storage/logs/
+apps/apis/storage/framework/cache/
+apps/apis/storage/framework/sessions/
+apps/apis/storage/framework/views/
+apps/apis/bootstrap/cache/*.php
+
+# Laravel env
+apps/apis/.env
+
+# =========================
+# React Apps
+# =========================
+apps/**/node_modules/
+apps/**/dist/
+apps/**/.vite/
+apps/**/.env
+apps/**/.env.*
+
+# =========================
+# Packages
+# =========================
+packages/**/node_modules/
+packages/**/dist/
+
+# =========================
+# Editor / OS
+# =========================
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+.idea/
+.DS_Store
+Thumbs.db
+
+# =========================
+# Testing / Coverage
+# =========================
+coverage/
+*.lcov
+
+# =========================
+# Misc
+# =========================
+*.log
